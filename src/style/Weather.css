@@ -1,0 +1,16 @@
+.city-container {
+  background-color: rgb(33, 37, 41);
+  color: white;
+  padding: 20px;
+  margin-bottom: 15%;
+  border-radius: 15px;
+  width: 75%;
+}
+
+.weather-container {
+  max-width: 800px;
+  margin: 5% auto;
+  background-color: darkblue;
+  color: white;
+  border-radius: 20px;
+}
