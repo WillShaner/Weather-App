@@ -1,11 +1,12 @@
-import './App.css';
-import Header from './components/Header';
-import Container from 'react-bootstrap/Container';
+import './index.css';
+import Header from './components/Header/Header';
 import { useState, useEffect } from 'react';
-import Weather from './components/Weather';
+import Weather from './components/Weather/Weather';
 import Background from './assets/background.jpg';
-import Loading from './components/Loading';
+import Loading from './components/Loading/Loading';
+import Footer from './components/Footer/Footer';
 function App() {
+  const [error, setError] = useState(false)
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
@@ -27,22 +28,26 @@ function App() {
       )
         .then((res) => res.json())
         .then((result) => {
-          setData(result);
-          console.log(result, lat, long);
-        });
+          setData(result)
+        }).catch(error => {
+          console.log(error)
+          setError(true)}
+          );
+        
     };
     fetchData();
   }, [lat, long]);
 
   return (
-    <Container fluid style={style}>
+    <div className="main-container" style={style}>
       <Header />
       {typeof data.main != 'undefined' ? (
-        <Weather weatherData={data} />
+        <Weather weatherData={data} error={error} setError={setError} />
       ) : (
         <Loading />
       )}
-    </Container>
+      <Footer />
+    </div>
   );
 }
 

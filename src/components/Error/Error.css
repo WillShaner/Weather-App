@@ -1,0 +1,40 @@
+.error {
+  height: 80vh;
+  width: 100vw;
+  margin: auto;
+  text-align: center;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.error-logo {
+  display: block;
+  text-align: center;
+  margin: 1em auto;
+  font-size: 3em;
+  color: red;
+}
+.error button {
+  font-size: 1.5em;
+  border-radius: 8px;
+  padding: 0.5em 2em;
+  background-color: rgb(21, 21, 207);
+  color: white;
+  border: none;
+  -webkit-transition: 150ms ease-in-out;
+  transition: 150ms ease-in-out;
+}
+.error button:hover {
+  background-color: rgb(15, 15, 157);
+}
