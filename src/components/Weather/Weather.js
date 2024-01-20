@@ -58,7 +58,7 @@ const Weather = ({weatherData, error, setBackground}) => {
           <h1>{weatherData.name}</h1>
           <h2>{weatherData.main.temp} &deg;F</h2>
           <img
-            src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
+            src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
             alt="weather icon"
           />
           <h4>Description: {weatherData.weather[0].description}</h4>
